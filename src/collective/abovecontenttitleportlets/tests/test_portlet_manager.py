@@ -32,12 +32,12 @@ class TestPortletManager(unittest.TestCase):
         self.assertLess(content_pos, manager_pos)
 
         # First viewlet manager, then portlet manager.
-        viewlet_manager_pos = html.find('id="viewlet-above-content-body"')
+        viewlet_manager_pos = html.find('id="viewlet-above-content-title"')
         self.assertLess(viewlet_manager_pos, manager_pos)
 
-        # First portlet manager, then content core.
-        content_core_pos = html.find('id="content-core"')
-        self.assertLess(manager_pos, content_core_pos)
+        # First portlet manager, then below content title.
+        below_content_title_pos = html.find('id="viewlet-below-content-title"')
+        self.assertLess(manager_pos, below_content_title_pos)
 
     def test_portlet_manager_link(self):
         link = "@@topbar-manage-portlets/collective.abovecontenttitleportlets"
@@ -77,6 +77,6 @@ class TestPortletManager(unittest.TestCase):
         input_pos = html.find('name="__ac_name"')
         self.assertLess(manager_pos, input_pos)
 
-        # First input, then content core.
-        content_core_pos = html.find('id="content-core"')
-        self.assertLess(input_pos, content_core_pos)
+        # First input, then below content title.
+        below_content_title_pos = html.find('id="viewlet-below-content-title"')
+        self.assertLess(input_pos, below_content_title_pos)
