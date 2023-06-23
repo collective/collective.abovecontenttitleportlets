@@ -3,9 +3,9 @@
    This text does not appear on PyPI or github. It is a comment.
 
 
-===================================
+====================================
 collective.abovecontenttitleportlets
-===================================
+====================================
 
 Show portlets above the content body.
 
