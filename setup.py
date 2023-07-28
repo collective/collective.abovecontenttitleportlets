@@ -14,7 +14,7 @@ long_description = "\n\n".join(
 
 setup(
     name="collective.abovecontenttitleportlets",
-    version="1.0.0a2",
+    version="1.0.0a3.dev0",
     description="Content Type to show an abovecontenttitleportlets",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
